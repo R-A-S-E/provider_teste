@@ -24,7 +24,6 @@ class _HomePageState extends State<HomePage> {
               height: MediaQuery.of(context).size.height * 0.7,
               child: ListView(
                 children: controller.transactionList
-                    // .where((element) => element.value < 0)
                     .map((e) => ListTile(
                           title: Text(e.title),
                           subtitle: Text(e.category),

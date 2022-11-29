@@ -8,8 +8,12 @@ class AppProvider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<HomeController>(
-      create: (context) => HomeController(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<HomeController>(
+          create: (context) => HomeController(),
+        ),
+      ],
       child: const AppMaterial(),
     );
   }
